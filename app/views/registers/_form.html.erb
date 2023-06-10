@@ -1,0 +1,54 @@
+<%= form_with(model: register) do |form| %>
+<% if register.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(register.errors.count, "error") %> prohibited this register from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% register.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :name, class: label_class %>
+          <%= form.text_field :name, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :phone_number, class: label_class %>
+          <%= form.text_field :phone_number, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :amount, class: label_class %>
+          <%= form.text_field :amount, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :arrival_time, class: label_class %>
+          <%= form.datetime_field :arrival_time, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :departure_time, class: label_class %>
+          <%= form.datetime_field :departure_time, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :slots, class: label_class %>
+          <%= form.number_field :slots, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :license_plate, class: label_class %>
+          <%= form.text_field :license_plate, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :vehicle_type, class: label_class %>
+          <%= form.text_field :vehicle_type, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if register.persisted? %>
+<%= link_to "Cancel", register, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", registers_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

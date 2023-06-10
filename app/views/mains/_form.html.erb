@@ -1,0 +1,42 @@
+<%= form_with(model: main) do |form| %>
+<% if main.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(main.errors.count, "error") %> prohibited this main from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% main.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :car_type, class: label_class %>
+          <%= form.text_field :car_type, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :car_plate, class: label_class %>
+          <%= form.text_field :car_plate, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :check_in_time, class: label_class %>
+          <%= form.datetime_field :check_in_time, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :phone_number, class: label_class %>
+          <%= form.text_field :phone_number, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :parking_slots, class: label_class %>
+          <%= form.text_field :parking_slots, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if main.persisted? %>
+<%= link_to "Cancel", main, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", mains_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

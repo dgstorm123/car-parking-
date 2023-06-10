@@ -1,0 +1,49 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Register</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to registers_path, class: button_class(theme: "transparent") do %>
+      All Registers
+      <% end %>
+      <%= link_to edit_register_path(@register), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @register.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Phone number:</p>
+        <p><%= @register.phone_number %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Amount:</p>
+        <p><%= @register.amount %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Arrival time:</p>
+        <p><%= @register.arrival_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Departure time:</p>
+        <p><%= @register.departure_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Slots:</p>
+        <p><%= @register.slots %></p>
+      </li>
+      <li>
+        <p class="font-semibold">License plate:</p>
+        <p><%= @register.license_plate %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Vehicle type:</p>
+        <p><%= @register.vehicle_type %></p>
+      </li>
+  </ul>
+</div>

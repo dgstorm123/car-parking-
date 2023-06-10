@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_plate: MyString
+  check_out_time: 2023-06-10 15:19:55
+  amount: 9.99
+  pay_option: MyString
+
+two:
+  car_plate: MyString
+  check_out_time: 2023-06-10 15:19:55
+  amount: 9.99
+  pay_option: MyString

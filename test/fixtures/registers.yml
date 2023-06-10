@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone_number: MyString
+  amount: 9.99
+  arrival_time: 2023-06-10 00:57:09
+  departure_time: 2023-06-10 00:57:09
+  slots: 1
+  license_plate: MyString
+  vehicle_type: MyString
+
+two:
+  name: MyString
+  phone_number: MyString
+  amount: 9.99
+  arrival_time: 2023-06-10 00:57:09
+  departure_time: 2023-06-10 00:57:09
+  slots: 1
+  license_plate: MyString
+  vehicle_type: MyString

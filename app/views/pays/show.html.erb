@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Pay</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to pays_path, class: button_class(theme: "transparent") do %>
+      All Pays
+      <% end %>
+      <%= link_to edit_pay_path(@pay), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Car plate:</p>
+        <p><%= @pay.car_plate %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Check out time:</p>
+        <p><%= @pay.check_out_time %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Amount:</p>
+        <p><%= @pay.amount %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Pay option:</p>
+        <p><%= @pay.pay_option %></p>
+      </li>
+  </ul>
+</div>

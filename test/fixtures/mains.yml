@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_type: MyString
+  car_plate: MyString
+  check_in_time: 2023-06-10 03:57:17
+  phone_number: MyString
+  parking_slots: MyString
+
+two:
+  car_type: MyString
+  car_plate: MyString
+  check_in_time: 2023-06-10 03:57:17
+  phone_number: MyString
+  parking_slots: MyString
